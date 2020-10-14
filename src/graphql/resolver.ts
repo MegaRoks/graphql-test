@@ -1,3 +1,6 @@
+import { Author } from './../entities/author.entity';
+import connection from './../database';
+
 const author = {
     authorId: 1,
     name: 'Author 1',
@@ -14,7 +17,14 @@ const books = [
 ];
 
 export default {
-    getBooks() {
-        return books;
+    async getBooks() {
+        return connection
+            .then((connect) => {
+                const authorRepository = connect.getRepository(Author);
+                return authorRepository.find();
+            })
+            .catch((err) => {
+                console.error('error', err);
+            });
     },
 };
