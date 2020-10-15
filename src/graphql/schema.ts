@@ -2,15 +2,15 @@ import { buildSchema } from 'graphql';
 
 export default buildSchema(`
     type BookType {
-        bookId: Int!
+        bookId: String!
         name: String!
         pageCount: Int!
-        authorId: Int!
+        authorId: String!
         author: AuthorType!
     }
 
     type AuthorType {
-        authorId: Int!
+        authorId: String!
         name: String!
     }
 

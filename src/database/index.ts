@@ -13,4 +13,7 @@ export default createConnection({
     entities: [Author, Book],
     synchronize: true,
     logging: false,
-});
+})
+    .catch((err) => {
+        console.error('err', err);
+    });

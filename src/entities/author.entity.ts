@@ -5,7 +5,7 @@ import { Book } from './book.entity';
 @Entity('authors')
 export class Author {
     @PrimaryGeneratedColumn('uuid')
-    public readonly bookId: string;
+    public readonly authorId: string;
 
     @Column({ type: 'varchar', nullable: false, length: 200 })
     public readonly name: string;
