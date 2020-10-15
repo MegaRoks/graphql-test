@@ -1,25 +1,18 @@
 import 'reflect-metadata';
-import express, { Request, Response } from 'express';
-import { graphqlHTTP } from 'express-graphql';
+import { createConnection } from 'typeorm';
+import { ApolloServer } from 'apollo-server';
+import { buildSchema } from 'type-graphql';
 
-import schema from './graphql/schema';
-import resolver from './graphql/resolver';
+import { BookResolver } from './resolvers/book.resolver';
 
-const app = express();
-const port = process.env.SERVER_PORT;
+async function main() {
+    const port = process.env.SERVER_PORT || 8080;
 
-app.use(
-    graphqlHTTP({
-        schema,
-        rootValue: resolver,
-        graphiql: true,
-    }),
-);
-
-app.get('/', (req: Request, res: Response) => {
-    return res.send('API is working');
-});
-
-app.listen(port, () => {
+    await createConnection();
+    const schema = await buildSchema({ resolvers: [BookResolver] });
+    const server = new ApolloServer({ schema });
+    await server.listen(port);
     console.log(`Server is listening on ${port}`);
-});
+}
+
+main();
