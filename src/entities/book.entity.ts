@@ -1,5 +1,6 @@
-import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, RelationId } from 'typeorm';
 import { ObjectType, Field, ID, Int } from 'type-graphql';
+import { Max, Min } from 'class-validator';
 
 import { Author } from './author.entity';
 
@@ -11,6 +12,8 @@ export class Book extends BaseEntity {
     public readonly bookId: string;
 
     @Field(() => String)
+    @Min(3)
+    @Max(200)
     @Column({ type: 'varchar', nullable: false, length: 200 })
     public readonly name: string;
 
@@ -18,13 +21,12 @@ export class Book extends BaseEntity {
     @Column({ type: 'integer', nullable: false })
     public readonly pageCount: number;
 
-    @Field(() => Int)
-    @Column({ type: 'varchar', nullable: false })
-    public readonly authorId: string;
-
+    @Field(() => Author)
     @ManyToOne(() => Author, (author: Author) => author.books)
     @JoinColumn({ name: 'authorId' })
     public readonly author: Author;
+    @RelationId((book: Book) => book.author)
+    public readonly authorId: string;
 
     @Field(() => Date)
     @CreateDateColumn()
