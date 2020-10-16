@@ -10,10 +10,6 @@ services:
             target: development
         environment:
             - SERVER_PORT=${SERVER_PORT}
-            - DATABASE_PASSWORD=${DATABASE_PASSWORD}
-            - DATABASE_USERNAME=${DATABASE_USERNAME}
-            - DATABASE_PORT=${DATABASE_PORT}
-            - DATABASE_HOST=${DATABASE_HOST}
         ports:
             - ${SERVER_PORT}:${SERVER_PORT}
         volumes:
