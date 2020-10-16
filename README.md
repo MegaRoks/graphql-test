@@ -9,6 +9,6 @@ DATABASE_PASSWORD=admin
 DATABASE_USERNAME=admin
 DATABASE_PORT=5432
 DATABASE_NAME=db
-DATABASE_HOST=db-postgres // It's variable depends of db container name. If db container name db-postgres, you have to use this name for host db in the project.
 DATABASE_TYPE=postgres
+DATABASE_HOST=db-postgres // It's variable depends of db container name. If db container name db-postgres, you have to use this name for host db in the project
 ```
