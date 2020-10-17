@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book Resolver Tests should create book 1`] = `
+Object {
+  "data": Object {
+    "createBook": Object {
+      "bookId": "Hello World",
+      "createdAt": "Hello World",
+      "name": "Hello World",
+      "updatedAt": "Hello World",
+    },
+  },
+}
+`;
+
+exports[`Book Resolver Tests should delete book 1`] = `
+Object {
+  "data": Object {
+    "deleteBook": true,
+  },
+}
+`;
+
+exports[`Book Resolver Tests should get book 1`] = `
+Object {
+  "data": Object {
+    "getBook": Object {
+      "bookId": "Hello World",
+      "createdAt": "Hello World",
+      "name": "Hello World",
+      "updatedAt": "Hello World",
+    },
+  },
+}
+`;
+
+exports[`Book Resolver Tests should get book list with author 1`] = `
+Object {
+  "data": Object {
+    "getBooksList": Array [
+      Object {
+        "author": Object {
+          "authorId": "Hello World",
+          "createdAt": "Hello World",
+          "name": "Hello World",
+          "updatedAt": "Hello World",
+        },
+        "bookId": "Hello World",
+        "createdAt": "Hello World",
+        "name": "Hello World",
+        "updatedAt": "Hello World",
+      },
+      Object {
+        "author": Object {
+          "authorId": "Hello World",
+          "createdAt": "Hello World",
+          "name": "Hello World",
+          "updatedAt": "Hello World",
+        },
+        "bookId": "Hello World",
+        "createdAt": "Hello World",
+        "name": "Hello World",
+        "updatedAt": "Hello World",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Book Resolver Tests should get book list without author 1`] = `
+Object {
+  "data": Object {
+    "getBooksList": Array [
+      Object {
+        "bookId": "Hello World",
+        "createdAt": "Hello World",
+        "name": "Hello World",
+        "updatedAt": "Hello World",
+      },
+      Object {
+        "bookId": "Hello World",
+        "createdAt": "Hello World",
+        "name": "Hello World",
+        "updatedAt": "Hello World",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Book Resolver Tests should update book 1`] = `
+Object {
+  "data": Object {
+    "updateBook": Object {
+      "bookId": "Hello World",
+      "createdAt": "Hello World",
+      "name": "Hello World",
+      "updatedAt": "Hello World",
+    },
+  },
+}
+`;

@@ -16,7 +16,7 @@ Object {
 exports[`Author Resolver Tests should delete author 1`] = `
 Object {
   "data": Object {
-    "deleteAuthor": true,
+    "deleteAuthor": false,
   },
 }
 `;

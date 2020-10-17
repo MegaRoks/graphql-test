@@ -40,7 +40,6 @@ describe('Author Resolver Tests', () => {
         `;
 
         const response = await graphql(schemaWithMocks, query);
-
         expect(response).toMatchSnapshot();
     });
 
@@ -54,7 +53,6 @@ describe('Author Resolver Tests', () => {
         `;
 
         const response = await graphql(schemaWithMocks, query);
-
         expect(response).toMatchSnapshot();
     });
 
@@ -68,7 +66,6 @@ describe('Author Resolver Tests', () => {
         `;
 
         const response = await graphql(schemaWithMocks, query);
-
         expect(response).toMatchSnapshot();
     });
 
@@ -82,7 +79,6 @@ describe('Author Resolver Tests', () => {
         `;
 
         const response = await graphql(schemaWithMocks, query);
-
         expect(response).toMatchSnapshot();
     });
 
@@ -94,7 +90,6 @@ describe('Author Resolver Tests', () => {
         `;
 
         const response = await graphql(schemaWithMocks, query);
-
         expect(response).toMatchSnapshot();
     });
 });
