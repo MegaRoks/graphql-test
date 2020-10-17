@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author Resolver Tests should create author 1`] = `
+Object {
+  "data": Object {
+    "createAuthor": Object {
+      "authorId": "Hello World",
+      "createdAt": "Hello World",
+      "name": "Hello World",
+      "updatedAt": "Hello World",
+    },
+  },
+}
+`;
+
+exports[`Author Resolver Tests should delete author 1`] = `
+Object {
+  "data": Object {
+    "deleteAuthor": true,
+  },
+}
+`;
+
+exports[`Author Resolver Tests should get author 1`] = `
+Object {
+  "data": Object {
+    "getAuthor": Object {
+      "authorId": "Hello World",
+      "createdAt": "Hello World",
+      "name": "Hello World",
+      "updatedAt": "Hello World",
+    },
+  },
+}
+`;
+
+exports[`Author Resolver Tests should get author list 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Cannot query field "getAuthorsList" on type "Mutation".],
+  ],
+}
+`;
+
+exports[`Author Resolver Tests should update author 1`] = `
+Object {
+  "data": Object {
+    "updateAuthor": Object {
+      "authorId": "Hello World",
+      "createdAt": "Hello World",
+      "name": "Hello World",
+      "updatedAt": "Hello World",
+    },
+  },
+}
+`;
