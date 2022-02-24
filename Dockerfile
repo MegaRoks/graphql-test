@@ -1,11 +1,11 @@
-FROM node:14.9.0-alpine AS development
+FROM node:16.14.0-alpine AS development
 WORKDIR /usr/src/app
 COPY ./package.json yarn.lock ./
 RUN yarn install
 COPY ./ ./
 RUN yarn build
 
-FROM node:14.9.0-alpine AS production
+FROM node:16.14.0-alpine AS production
 WORKDIR /usr/src/app
 COPY ./package.json yarn.lock ./
 RUN yarn install --only=production
